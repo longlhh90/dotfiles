@@ -1,0 +1,35 @@
+
+# Aliases
+alias ls='exa --icons -F -H --group-directories-first --git -1'
+alias ll='ls -alF'
+
+alias v="nvim"
+alias vi="nvim"
+alias vim="nvim"
+
+alias config:vim="vim ~/.config/nvim -c NvimTreeClose"
+alias config:kitty="vim ~/.config/kitty/kitty.conf"
+alias config:zsh="vim ~/.zsh/.zshrc"
+alias sz="source .zshrc"
+alias config:lazygit="vim ~/Library/Application\ Support/lazygit/config.yml"
+
+alias query="zsh ~/scripts/query.sh"
+
+# Open emulator
+alias emulator:ios="open -a Simulator"
+alias emulator:android="~/Library/Android/sdk/emulator/emulator -avd $(~/Library/Android/sdk/emulator/emulator -list-avds | head -n 1)"
+
+# Datetime
+alias dtu="datefns date-to-unix -d"
+alias utd="datefns unix-to-date -u"
+alias now="datefns date-to-unix"
+
+alias altoweb="cd ~/projects/findhomecare-web"
+alias altoprod="cd ~/projects/production/findhomecare-web"
+alias altomob="cd ~/projects/alto-react-native"
+alias i:="zsh ~/scripts/query.sh --endpoint http://localhost:6900/api"
+alias query:local="pm2 stop all -s && pm2 start query-local -s && vim ~/projects/prisma-query/services/main.ts"
+alias query:dev="pm2 stop all -s && pm2 start query-dev -s && vim ~/projects/prisma-query/services/main.ts"
+alias query:prod="pm2 stop all -s && pm2 start query-prod -s && vim ~/projects/prisma-query/services/main.ts"
+alias stop:all="pm2 stop all -s"
+

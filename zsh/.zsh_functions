@@ -1,0 +1,33 @@
+# Utils
+
+# create directory structure and cd into it
+#
+function mkcd() {
+  mkdir -p -- "$1" && cd -P -- "$1"
+}
+
+# pretty print $PATH
+#
+function ppath() {
+  echo "${PATH//:/$'\n'}"
+}
+
+function pfpath() {
+  echo "${FPATH//:/$'\n'}"
+}
+
+
+# random number generator
+# selects from the given number (default 100)
+#
+function rand() {
+  local limit=${1:-100}
+  seq $limit | gshuf -n 1
+}
+
+# convert datetime now to unix timestamp
+function now_to_unix() {
+  local timestamp=$(date +%s)
+  echo "Now is: '$timestamp'" 
+}
+
