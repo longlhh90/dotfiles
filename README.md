@@ -2,7 +2,7 @@
 ```bash
 ls -s ~/.config/zsh/.zshrc ~/.zshrc
 ```
-NOTE: If you don't have go, go to .zsrhrc comment go scripts
+NOTE: If you don't have go lang, go to .zsrhrc comment go scripts
 
 #### Install all zsh plugins
 ```bash
